@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import api from '../../services/api';
@@ -37,7 +37,7 @@ export default function Dashboard() {
     getFoot();
   }, []);
 
-  const handleAddFood = async (food:AddFood): Promise<void> => {
+  const handleAddFood = async (food: AddFood): Promise<void> => {
     try {
       const response = await api.post('/foods', {
         ...food,
